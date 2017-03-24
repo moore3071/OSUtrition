@@ -40,7 +40,7 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void toMapSearch(View view) {
-        Intent intent = new Intent(this, Search_Map.class);
+        Intent intent = new Intent(this, Search_Maps.class);
         startActivity(intent);
     }
 

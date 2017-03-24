@@ -3,4 +3,5 @@
     <string name="settings">settings</string>
     <string name="view_map">View Map</string>
     <string name="search">Find a Location</string>
+    <string name="title_activity_search__maps">Map</string>
 </resources>
