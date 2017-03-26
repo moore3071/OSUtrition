@@ -22,6 +22,7 @@ public class HomePage extends AppCompatActivity {
         }
         Log.d("CREATION", "onCreate() is being execued!");
         setContentView(R.layout.activity_home_page);
+
     }
 
     @Override
