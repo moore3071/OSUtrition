@@ -3,5 +3,9 @@
     <string name="settings">settings</string>
     <string name="view_map">View Map</string>
     <string name="search">Find a Location</string>
-    <string name="title_activity_search__maps">Map</string>
+
+    <string name="title_activity_settings__screen">Settings_Screen</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
