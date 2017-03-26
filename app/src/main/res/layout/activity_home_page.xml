@@ -33,31 +33,31 @@
             android:text="@string/view_map"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="137dp"
             android:id="@+id/button"
-            android:layout_below="@+id/text1"
-            android:layout_centerHorizontal="true"
-            android:onClick="toMapSearch" />
-
-        <Button
-            android:text="@string/search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="137dp"
-            android:id="@+id/button2"
-            android:layout_below="@+id/button"
-            android:layout_centerHorizontal="true"
-            android:onClick="toFilterSearch" />
+            android:onClick="toMapSearch"
+            android:layout_marginTop="47dp"
+            android:layout_below="@+id/button2"
+            android:layout_centerHorizontal="true" />
 
         <Button
             android:text="@string/settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="137dp"
             android:id="@+id/button3"
-            android:layout_below="@id/button2"
-            android:layout_centerHorizontal="true" />
+            android:layout_marginTop="37dp"
+            android:layout_below="@+id/button"
+            android:layout_alignRight="@+id/button"
+            android:layout_alignEnd="@+id/button" />
 
+        <Button
+            android:text="@string/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:onClick="toFilterSearch"
+            android:layout_marginTop="38dp"
+            android:layout_below="@+id/text1"
+            android:layout_centerHorizontal="true" />
 
 
     </RelativeLayout>
