@@ -10,4 +10,6 @@ public class Location_Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location__menu);
     }
+
+    
 }
