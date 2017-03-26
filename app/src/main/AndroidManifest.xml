@@ -32,6 +32,27 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.osu.osutrition.HomePage" />
         </activity>
+        <activity
+            android:name=".Location_Menu"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_location_menu"
+            android:parentActivityName=".Location_Info"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.osu.osutrition.Location_Info" />
+        </activity>
+        <activity
+            android:name=".Location_Info"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_location_info"
+            android:parentActivityName=".HomePage"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.osu.osutrition.HomePage" />
+        </activity>
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
