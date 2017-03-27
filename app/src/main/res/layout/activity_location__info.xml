@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:padding="24dp"
             android:gravity="center"
-            android:text="Some Random Restaurant"
+            android:text="Berry Cafe"
             android:textStyle="bold"
             />
 
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:padding="24dp"
             android:gravity="left"
-            android:text="Address:\n### Address Ave\n(Near some building)\nColumbus, OH 43210\n614-292-1234"
+            android:text="Address:\n1858 Neil Ave Mall\n(William Oxley Thompson Library)\nColumbus, OH 43210\n614-247-8466"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -103,7 +103,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Closed"/>
+                    android:text="11am - 11pm"/>
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
@@ -113,12 +113,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Monday"/>
+                    android:text="Monday-Thursday"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="7am - 9pm"/>
+                    android:text="8am - 8pm"/>
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
@@ -128,12 +128,27 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Tuesday"/>
+                    android:text="Friday"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="6:30am - 10pm"/>
+                    android:text="7:30am - 11pm"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Saturday"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="8:30am - 8pm"/>
             </TableRow>
         </TableLayout>
     </LinearLayout>
