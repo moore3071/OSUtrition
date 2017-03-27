@@ -59,4 +59,9 @@ public class HomePage extends AppCompatActivity {
         Intent intent = new Intent(this, Location_Menu.class);
         startActivity(intent);
     }
+
+    public void toSettings(View view) {
+        Intent intent = new Intent(this, Settings_Screen.class);
+        startActivity(intent);
+    }
 }
