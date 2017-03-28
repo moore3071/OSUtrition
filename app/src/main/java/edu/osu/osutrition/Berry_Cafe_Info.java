@@ -13,7 +13,7 @@ public class Berry_Cafe_Info extends AppCompatActivity {
         setContentView(R.layout.activity_berry_cafe__info);
     }
 
-    public void toLocationMenu(View view) {
+    public void toBerryCafeMenu(View view) {
         Intent intent = new Intent(this, Berry_Cafe_Menu.class);
         startActivity(intent);
     }
