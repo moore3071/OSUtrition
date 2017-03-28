@@ -25,6 +25,7 @@
         android:gravity="center"
         android:textStyle="bold"
         android:text="Entrees and Sides"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,6 +50,14 @@
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="$1.40"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:onClick="toNutrition0"
+                    android:text="View Nutrition"
+                    android:id="@+id/button5" />
             </TableRow>
             <TableRow
                 android:layout_height="match_parent"
@@ -64,6 +73,11 @@
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="$1.50"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="View Nutrition"/>
             </TableRow>
             <TableRow
                 android:layout_height="match_parent"
@@ -79,9 +93,15 @@
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="$1.75"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="View Nutrition"/>
             </TableRow>
         </TableLayout>
     </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -153,6 +173,11 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:text="$4.15"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="View Nutrition"/>
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -177,6 +202,11 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:text="$3.95"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="View Nutrition"/>
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -201,6 +231,11 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:text="$3.95"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="View Nutrition"/>
                 </TableRow>
             </TableLayout>
         </LinearLayout>
@@ -246,6 +281,11 @@
                         android:padding="5dp"
                         android:textStyle="bold"
                         android:text="Large - 20 oz."/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="View Nutrition"/>
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -265,6 +305,11 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:text="$4.35"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="View Nutrition"/>
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -284,6 +329,11 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:text="$4.35"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="View Nutrition"/>
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -303,6 +353,11 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:text="$4.15"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="View Nutrition"/>
                 </TableRow>
             </TableLayout>
         </LinearLayout>
