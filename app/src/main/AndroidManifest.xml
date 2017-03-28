@@ -23,13 +23,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".Search_Filter" />
-            <!--
+        <!--
                 ATTENTION: This was auto-generated to add Google Play services to your project for
                 App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
-            -->
+        -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
         <activity
             android:name=".Settings_Screen"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -41,25 +42,46 @@
                 android:value="edu.osu.osutrition.HomePage" />
         </activity>
         <activity
-            android:name=".Location_Menu"
+            android:name=".Berry_Cafe_Menu"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_location_menu"
-            android:parentActivityName=".Location_Info"
+            android:label="@string/title_activity_berry_cafe_menu"
+            android:parentActivityName=".Berry_Cafe_Info"
             android:theme="@style/FullscreenTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.osu.osutrition.Location_Info" />
+                android:value="edu.osu.osutrition.Berry_Cafe_Info" />
         </activity>
         <activity
-            android:name=".Location_Info"
+            android:name=".Berry_Cafe_Info"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_location_info"
+            android:label="@string/title_activity_berry_cafe_info"
             android:parentActivityName=".HomePage"
             android:theme="@style/FullscreenTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.osu.osutrition.HomePage" />
         </activity>
+        <activity
+            android:name=".Oxleys_Info"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="ahhhh"
+            android:parentActivityName=".HomePage"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.osu.osutrition.HomePage" />
+        </activity>
+        <activity
+            android:name=".Oxleys_Menu"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_oxleys_menu"
+            android:parentActivityName=".HomePage"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.osu.osutrition.Oxleys_Info"/>
+        </activity>
+
         <activity
             android:name=".Search_Maps">
             <meta-data
@@ -79,6 +101,36 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity
+            android:name=".NutritionData0"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_nutrition_data0"
+            android:parentActivityName=".Berry_Cafe_Menu"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.osu.osutrition.Berry_Cafe_Menu" />
+        </activity>
+        <activity
+            android:name=".NutritionData1"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_nutrition_data1"
+            android:parentActivityName=".Location_Menu"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.osu.osutrition.Location_Menu" />
+        </activity>
+        <activity
+            android:name=".NutritionData2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_nutrition_data2"
+            android:parentActivityName=".Location_Menu"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.osu.osutrition.Location_Menu" />
+        </activity>
     </application>
 
 </manifest>

@@ -1,16 +1,10 @@
 package edu.osu.osutrition;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 public class HomePage extends AppCompatActivity {
 
@@ -51,12 +45,12 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void toLocationInfo(View view) {
-        Intent intent = new Intent(this, Location_Info.class);
+        Intent intent = new Intent(this, Berry_Cafe_Info.class);
         startActivity(intent);
     }
 
     public void toLocationMenu(View view) {
-        Intent intent = new Intent(this, Location_Menu.class);
+        Intent intent = new Intent(this, Berry_Cafe_Menu.class);
         startActivity(intent);
     }
 
