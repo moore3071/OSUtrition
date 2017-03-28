@@ -15,7 +15,7 @@ public class Oxleys_Info extends AppCompatActivity {
         setContentView(R.layout.activity_oxleys_info);
     }
 
-    public void toLocationMenu(View view) {
+    public void toOxleyMenu(View view) {
         Intent intent = new Intent(this, Oxleys_Menu.class);
         startActivity(intent);
     }

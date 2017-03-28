@@ -13,7 +13,7 @@ public class Search_Filter extends AppCompatActivity {
         setContentView(R.layout.activity_search__filter);
     }
 
-    public void toLocationInfo(View view) {
+    public void toBerryCafe(View view) {
         Intent intent = new Intent(this, Berry_Cafe_Info.class);
         startActivity(intent);
     }
