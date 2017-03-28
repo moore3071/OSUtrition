@@ -14,7 +14,7 @@ public class Search_Filter extends AppCompatActivity {
     }
 
     public void toLocationInfo(View view) {
-        Intent intent = new Intent(this, Location_Info.class);
+        Intent intent = new Intent(this, Berry_Cafe_Info.class);
         startActivity(intent);
     }
 }
