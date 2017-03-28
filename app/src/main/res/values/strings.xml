@@ -4,12 +4,14 @@
     <string name="view_map">View Map</string>
     <string name="search">Find a Location</string>
 
-    <string name="title_activity_settings__screen">Settings_Screen</string>
+    <string name="title_activity_settings__screen">Settings</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_maps">Map</string>
 
-    <string name="title_activity_location_menu">Location_Menu</string>
+    <string name="title_activity_berry_cafe_menu">Berry Cafe Menu</string>
+    <string name="title_activity_oxleys_menu">Oxleys Menu</string>
 
-    <string name="title_activity_location_info">Location_Info</string>
+    <string name="title_activity_berry_cafe_info">Berry Cafe Info</string>
+    <string name="title_activity_oxleys_info">Oxleys Info</string>
 </resources>
