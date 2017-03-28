@@ -89,6 +89,26 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.osu.osutrition.Location_Menu" />
         </activity>
+        <activity
+            android:name=".NutritionData1"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_nutrition_data1"
+            android:parentActivityName=".Location_Menu"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.osu.osutrition.Location_Menu" />
+        </activity>
+        <activity
+            android:name=".NutritionData2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_nutrition_data2"
+            android:parentActivityName=".Location_Menu"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.osu.osutrition.Location_Menu" />
+        </activity>
     </application>
 
 </manifest>

@@ -16,6 +16,14 @@ public class Location_Menu extends AppCompatActivity {
         Intent intent = new Intent(this, NutritionData0.class);
         startActivity(intent);
     }
+    public void toNutrition1(View view){
+        Intent intent = new Intent(this, NutritionData1.class);
+        startActivity(intent);
+    }
+    public void toNutrition2(View view){
+        Intent intent = new Intent(this, NutritionData2.class);
+        startActivity(intent);
+    }
 
     
 }

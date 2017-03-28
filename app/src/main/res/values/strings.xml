@@ -14,4 +14,8 @@
     <string name="title_activity_location_info">Location_Info</string>
 
     <string name="title_activity_nutrition_data0">NutritionData0</string>
+
+    <string name="title_activity_nutrition_data1">NutritionData1</string>
+
+    <string name="title_activity_nutrition_data2">NutritionData2</string>
 </resources>
