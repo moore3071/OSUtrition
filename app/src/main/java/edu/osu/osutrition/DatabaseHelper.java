@@ -34,11 +34,13 @@ public class DatabaseHelper {
 
     private Context app;
     private SQLiteDatabase db;
+    private Context screen;
 
 
     //Constructor
     public DatabaseHelper(Context c) {
         app = c.getApplicationContext();
+        screen = c;
         CustomOpenHelper openHelper = new CustomOpenHelper(app);
         this.db = openHelper.getWritableDatabase();
     }
@@ -101,6 +103,8 @@ public class DatabaseHelper {
                 result.get(count).add(cursor.getString(2));
                 count++;
             } while (cursor.moveToNext());
+        } else {
+            ErrorDisplay.makeError(screen, "Database table empty", "The database appears to be empty. Is your internet connection empty?", true);
         }
         if (cursor != null && !cursor.isClosed()) {
             cursor.close();
@@ -125,7 +129,11 @@ public class DatabaseHelper {
                 vars[3] = tmp.getString("diningStyle");
                 vars[4] = tmp.getString("photoUrl");
                 vars[5] = tmp.getString("summary");
-                vars[6] = tmp.getJSONArray("locationMenu").getJSONObject(0).getJSONArray("sections").getJSONObject(0).getString("sectionID");
+                if(tmp.getJSONArray("locationMenu").length()>0 && tmp.getJSONArray("locationMenu").getJSONObject(0).getJSONArray("sections").length()>0) {
+                    vars[6] = tmp.getJSONArray("locationMenu").getJSONObject(0).getJSONArray("sections").getJSONObject(0).getString("sectionID");
+                } else {
+                    vars[6] = "";
+                }
                 updateEntry(TABLE_LOCATIONS, vars);
 
                 //Add any missing cuisines
@@ -143,6 +151,7 @@ public class DatabaseHelper {
             }
         } catch (JSONException e) {
             e.printStackTrace();
+            ErrorDisplay.makeError(screen, "Database fatal error", "The database could not be modified accurately suggesting a bad schema", true);
         }
     }
 

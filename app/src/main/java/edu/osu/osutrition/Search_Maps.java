@@ -66,14 +66,7 @@ public class Search_Maps extends FragmentActivity implements OnMapReadyCallback 
             Log.d("Yep", "onMapReady: Failed on map creation");
         }
         if(error) {
-            AlertDialog dialog = new AlertDialog.Builder(this)
-                    .setTitle("Error creating map")
-                    .setMessage(error_message)
-                    .setPositiveButton("Dismiss", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                        }
-                    }).create();
-            dialog.show();
+            ErrorDisplay.makeError(this, "Error creating map", error_message, false);
         }
     }
 }

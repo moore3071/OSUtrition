@@ -1,18 +1,13 @@
 package edu.osu.osutrition;
 
 import android.app.Activity;
-import android.content.Context;
-import android.icu.text.IDNA;
 
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 
 import org.json.JSONObject;
-
-import static com.google.android.gms.auth.api.credentials.PasswordSpecification.gt;
 
 public class APIHelper {
 
@@ -49,7 +44,6 @@ public class APIHelper {
 
             @Override
             public void onErrorResponse(VolleyError error) {
-// TODO Auto-generated method stub
                 boolean network = ErrorDisplay.isNetworkUp(activity);
                 if(network) {
                     ErrorDisplay.makeError(activity, "Failed to get info", "Information couldn't be retrieved from OSU api. The app may not function correctly.", false);
