@@ -16,6 +16,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Search_Maps extends FragmentActivity implements OnMapReadyCallback {
@@ -35,48 +36,28 @@ public class Search_Maps extends FragmentActivity implements OnMapReadyCallback 
 
     /**
      * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         boolean error = false;
         String error_message = "";
+        DatabaseHelper db = new DatabaseHelper(this);
+        List<ArrayList<String>> locations = db.getLocations();
 
         mMap = googleMap;
 
         Geocoder gc = new Geocoder(this);
         try {
-            List<Address> addressList = gc.getFromLocationName("1858 Neil Ave, Columbus, OH 43210",1);
-            if(addressList.size()>0) {
-                Address address = addressList.get(0);
-                LatLng berry = new LatLng(address.getLatitude(), address.getLongitude());
-                mMap.addMarker(new MarkerOptions().position(berry).title("Berry Cafe(Thompson Library)"));
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(berry));
-            } else {
-                Log.d("Yep", "OnMapReady: Failed to find Berry Cafe");
-                error = true;
-                error_message = "Failed to find Berry Cafe or map center";
-            }
-            gc = new Geocoder(this);
-            addressList = gc.getFromLocationName("2000 Tuttle Park Place, Columbus, OH 43220",1);
-            if(addressList.size()>0) {
-                Address address = addressList.get(0);
-                LatLng oxleys = new LatLng(address.getLatitude(), address.getLongitude());
-                mMap.addMarker(new MarkerOptions().position(oxleys).title("Oxleys"));
-            } else {
-                Log.d("Yep", "OnMapReady: Failed to find Oxleys or my house");
-                error = true;
-                if(error_message!="") {
-                    error_message+="\n";
+            for(ArrayList<String> entry: locations) {
+                List<Address> addressList = gc.getFromLocationName(entry.get(1),1);
+                if(addressList.size() > 0) {
+                    Address address = addressList.get(0);
+                    LatLng coord = new LatLng(address.getLatitude(), address.getLongitude());
+                    mMap.addMarker(new MarkerOptions().position(coord).title(entry.get(0)));
                 }
-                error_message += "Failed to find Oxleys";
             }
-
+            LatLng center = new LatLng(39.9991926, -83.0170512);
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(center));
             mMap.moveCamera(CameraUpdateFactory.zoomTo(15));
         } catch (IOException e) {
             e.printStackTrace();

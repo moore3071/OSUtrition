@@ -1,5 +1,6 @@
 package edu.osu.osutrition;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,8 +15,10 @@ public class HomePage extends AppCompatActivity {
         if (savedInstanceState != null) {
             Log.d("STATE", savedInstanceState.toString());
         }
-        Log.d("CREATION", "onCreate() is being execued!");
+        Log.d("CREATION", "onCreate() is being executed!");
         setContentView(R.layout.activity_home_page);
+        APIHelper tmp = new APIHelper((Activity)this);
+        tmp.queryAPI(APIHelper.LOCATION_ENDPOINT);
 
     }
 

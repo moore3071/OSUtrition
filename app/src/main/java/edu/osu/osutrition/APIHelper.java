@@ -15,24 +15,33 @@ import static com.google.android.gms.auth.api.credentials.PasswordSpecification.
 
 public class APIHelper {
 
-    private static final String API_BASE = "content.osu.edu/v2/api/v1/";
-    private Activity activity;
-    private RequestQueue queue;
+    private static final String API_BASE = "https://content.osu.edu/v2/api/v1/";
+    public static final String LOCATION_ENDPOINT = "dining/locations/menus";
+    public static final String MENU_ENDPOINT = "dining/full/menu/section/";
 
-    public void APIHelper(Activity a) {
+    private DatabaseHelper db;
+    private Activity activity;
+
+    public APIHelper(Activity a) {
         activity = a;
+        db = new DatabaseHelper(a.getApplicationContext());
     }
 
-    public void queryAPI(final String endpoint) {
+    //Call this to query an API endoint. Note that menu endpoints need a number to specify
+    //the menu id
+    //XXX
+    public synchronized void queryAPI(final String endpoint) {
         JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.GET, API_BASE+endpoint, null, new Response.Listener<JSONObject>() {
 
             @Override
             public void onResponse(JSONObject response) {
-// TODO Auto-generated method stub
-                if(endpoint=="dining/locations/menus") {
-                    DatabaseHelper.updateLocations(response);
-                } else {
-                    DatabaseHelper.updateMenus(response);
+                switch(endpoint) {
+                    case LOCATION_ENDPOINT:
+                        db.updateLocations(response);
+                        break;
+                    case MENU_ENDPOINT:
+                        db.updateMenus(response);
+                        break;
                 }
             }
         }, new Response.ErrorListener() {
@@ -44,6 +53,8 @@ public class APIHelper {
             }
         });
 
-        MySingleton.getInstance(activity.getApplicationContext()).getRequestQueue().add(jsObjRequest);
+        if(jsObjRequest!=null&&activity!=null) {
+            MySingleton.getInstance(activity.getApplicationContext()).getRequestQueue().add(jsObjRequest);
+        }
     }
 }
