@@ -2,6 +2,7 @@ package edu.osu.osutrition;
 
 import android.app.Activity;
 import android.content.Context;
+import android.icu.text.IDNA;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -49,7 +50,12 @@ public class APIHelper {
             @Override
             public void onErrorResponse(VolleyError error) {
 // TODO Auto-generated method stub
-
+                boolean network = ErrorDisplay.isNetworkUp(activity);
+                if(network) {
+                    ErrorDisplay.makeError(activity, "Failed to get info", "Information couldn't be retrieved from OSU api. The app may not function correctly.", false);
+                } else {
+                    ErrorDisplay.makeError(activity, "Failed to get info", "Please enable networking. This app may not function or function inaccurately without metworking.", false);
+                }
             }
         });
 
